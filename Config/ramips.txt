@@ -2,6 +2,8 @@
 
 CONFIG_TARGET_ramips=y
 CONFIG_TARGET_ramips_mt7621=y
+
+#设备列表
 CONFIG_TARGET_ramips_mt7621_DEVICE_adslr_g7=y
 CONFIG_TARGET_ramips_mt7621_DEVICE_afoundry_ew1200=y
 CONFIG_TARGET_ramips_mt7621_DEVICE_alfa-network_ax1800rm=y
