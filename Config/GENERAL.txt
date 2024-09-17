@@ -59,8 +59,6 @@ CONFIG_NAND_SUPPORT=y
 CONFIG_mipsel=y
 CONFIG_ARCH="mipsel"
 
-CONFIG_TARGET_ROOTFS_INITRAMFS=y
-CONFIG_TARGET_INITRAMFS_COMPRESSION_LZMA=y
 CONFIG_EXTERNAL_CPIO=""
 
 
@@ -568,6 +566,7 @@ CONFIG_PACKAGE_libc=y
 CONFIG_PACKAGE_libgcc=y
 CONFIG_PACKAGE_libpthread=y
 CONFIG_PACKAGE_librt=y
+CONFIG_PACKAGE_libstdcpp=y
 CONFIG_PACKAGE_logd=y
 CONFIG_PACKAGE_mtd=y
 CONFIG_PACKAGE_netifd=y
@@ -578,6 +577,7 @@ CONFIG_PACKAGE_procd=y
 
 CONFIG_PACKAGE_procd-seccomp=y
 CONFIG_PACKAGE_procd-ujail=y
+CONFIG_PACKAGE_resolveip=y
 CONFIG_PACKAGE_rpcd=y
 CONFIG_PACKAGE_rpcd-mod-file=y
 CONFIG_PACKAGE_rpcd-mod-iwinfo=y
@@ -667,12 +667,16 @@ CONFIG_PACKAGE_kmod-nf-log6=y
 CONFIG_PACKAGE_kmod-nf-nat=y
 CONFIG_PACKAGE_kmod-nf-reject=y
 CONFIG_PACKAGE_kmod-nf-reject6=y
+CONFIG_PACKAGE_kmod-nf-socket=y
+CONFIG_PACKAGE_kmod-nf-tproxy=y
 CONFIG_PACKAGE_kmod-nfnetlink=y
 CONFIG_PACKAGE_kmod-nft-core=y
 CONFIG_PACKAGE_kmod-nft-fib=y
 CONFIG_PACKAGE_kmod-nft-fullcone=y
 CONFIG_PACKAGE_kmod-nft-nat=y
 CONFIG_PACKAGE_kmod-nft-offload=y
+CONFIG_PACKAGE_kmod-nft-socket=y
+CONFIG_PACKAGE_kmod-nft-tproxy=y
 
 CONFIG_PACKAGE_kmod-macvlan=y
 
@@ -795,9 +799,39 @@ CONFIG_WOLFSSL_ALT_NAMES=y
 
 
 
+CONFIG_PACKAGE_boost=y
+
+
+CONFIG_boost-compile-visibility-hidden=y
+CONFIG_boost-static-and-shared-libs=y
+CONFIG_boost-runtime-shared=y
+CONFIG_boost-variant-release=y
+
+
+CONFIG_PACKAGE_boost-program_options=y
+CONFIG_PACKAGE_boost-system=y
+
 CONFIG_PACKAGE_jansson=y
 CONFIG_PACKAGE_libblobmsg-json=y
-CONFIG_PACKAGE_libcap=y
+CONFIG_PACKAGE_libbpf=y
+CONFIG_PACKAGE_libcurl=y
+
+CONFIG_LIBCURL_OPENSSL=y
+
+CONFIG_LIBCURL_FILE=y
+CONFIG_LIBCURL_FTP=y
+CONFIG_LIBCURL_HTTP=y
+CONFIG_LIBCURL_COOKIES=y
+CONFIG_LIBCURL_TFTP=y
+CONFIG_LIBCURL_NGHTTP2=y
+
+CONFIG_LIBCURL_PROXY=y
+CONFIG_LIBCURL_CRYPTO_AUTH=y
+CONFIG_LIBCURL_TLS_SRP=y
+CONFIG_LIBCURL_THREADED_RESOLVER=y
+CONFIG_LIBCURL_UNIX_SOCKETS=y
+CONFIG_PACKAGE_libelf=y
+CONFIG_PACKAGE_libev=y
 CONFIG_PACKAGE_libgmp=y
 CONFIG_PACKAGE_libiwinfo=y
 CONFIG_PACKAGE_libjson-c=y
@@ -806,28 +840,25 @@ CONFIG_PACKAGE_liblucihttp=y
 CONFIG_PACKAGE_liblucihttp-lua=y
 CONFIG_PACKAGE_liblucihttp-ucode=y
 CONFIG_PACKAGE_libmnl=y
-CONFIG_PACKAGE_libncurses=y
 CONFIG_PACKAGE_libnetfilter-conntrack=y
 CONFIG_PACKAGE_libnettle=y
 
 
 CONFIG_PACKAGE_libnfnetlink=y
 CONFIG_PACKAGE_libnftnl=y
+CONFIG_PACKAGE_libnghttp2=y
 CONFIG_PACKAGE_libnl-tiny=y
-CONFIG_PACKAGE_libpcre2=y
 CONFIG_PACKAGE_libubox=y
 CONFIG_PACKAGE_libubus=y
 CONFIG_PACKAGE_libubus-lua=y
 CONFIG_PACKAGE_libuci=y
+CONFIG_PACKAGE_libuci-lua=y
 CONFIG_PACKAGE_libuclient=y
 CONFIG_PACKAGE_libucode=y
 CONFIG_PACKAGE_libudebug=y
 CONFIG_PACKAGE_libustream-openssl=y
-CONFIG_PACKAGE_libuv=y
-CONFIG_PACKAGE_libwebsockets-full=y
 CONFIG_PACKAGE_rpcd-mod-luci=y
 CONFIG_PACKAGE_rpcd-mod-rrdns=y
-CONFIG_PACKAGE_terminfo=y
 CONFIG_PACKAGE_zlib=y
 
 
@@ -839,12 +870,10 @@ CONFIG_PACKAGE_luci-light=y
 CONFIG_PACKAGE_luci-base=y
 CONFIG_LUCI_JSMIN=y
 
-CONFIG_LUCI_LANG_zh_Hans=y
 
 CONFIG_PACKAGE_luci-compat=y
 CONFIG_PACKAGE_luci-lua-runtime=y
 CONFIG_PACKAGE_luci-mod-admin-full=y
-CONFIG_PACKAGE_luci-mod-dashboard=y
 CONFIG_PACKAGE_luci-mod-network=y
 CONFIG_PACKAGE_luci-mod-status=y
 CONFIG_PACKAGE_luci-mod-system=y
@@ -855,11 +884,11 @@ CONFIG_PACKAGE_luci-app-bypass_INCLUDE_ShadowsocksR_Libev_Client=y
 CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Simple_Obfs=y
 CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Xray=y
 CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Socks_Server=y
-CONFIG_PACKAGE_luci-app-ddns-go=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
 CONFIG_PACKAGE_luci-app-firewall=y
 CONFIG_PACKAGE_luci-app-opkg=y
+CONFIG_PACKAGE_luci-app-passwall=y
 
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Simple_Obfs=y
@@ -890,12 +919,6 @@ CONFIG_PACKAGE_luci-lib-nixio=y
 CONFIG_PACKAGE_luci-lib-nixio_openssl=y
 
 
-CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-dashboard-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-ddns-go-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
 
 
 
@@ -908,6 +931,7 @@ CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
 
 
 
+CONFIG_PACKAGE_curl=y
 
 
 
@@ -917,7 +941,9 @@ CONFIG_PACKAGE_nftables-json=y
 
 
 
-CONFIG_PACKAGE_ddns-go=y
+CONFIG_PACKAGE_chinadns-ng=y
+CONFIG_PACKAGE_dns2socks=y
+CONFIG_PACKAGE_dns2tcp=y
 
 CONFIG_PACKAGE_knot-resolver_dnstap=y
 
@@ -936,6 +962,7 @@ CONFIG_PCAP_DNSPROXY_LISTENPORT=1053
 
 
 
+CONFIG_PACKAGE_ip-full=y
 
 
 
@@ -947,6 +974,9 @@ CONFIG_PCAP_DNSPROXY_LISTENPORT=1053
 
 
 CONFIG_PACKAGE_cgi-io=y
+CONFIG_PACKAGE_microsocks=y
+CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
+CONFIG_PACKAGE_trojan-plus=y
 CONFIG_PACKAGE_uhttpd=y
 CONFIG_PACKAGE_uhttpd-mod-ubus=y
 
@@ -959,6 +989,7 @@ CONFIG_PACKAGE_wpad-basic-openssl=y
 
 
 CONFIG_PACKAGE_6in4=y
+CONFIG_PACKAGE_ipt2socks=y
 CONFIG_PACKAGE_iw=y
 CONFIG_PACKAGE_odhcp6c=y
 CONFIG_PACKAGE_odhcp6c_ext_cer_id=0
@@ -968,6 +999,8 @@ CONFIG_PACKAGE_odhcpd_ipv6only_ext_cer_id=0
 
 CONFIG_PACKAGE_ppp=y
 CONFIG_PACKAGE_ppp-mod-pppoe=y
+CONFIG_PACKAGE_simple-obfs-client=y
+CONFIG_PACKAGE_tcping=y
 CONFIG_PACKAGE_uclient-fetch=y
 
 
@@ -975,6 +1008,7 @@ CONFIG_PACKAGE_uclient-fetch=y
 
 
 
+CONFIG_PACKAGE_unzip=y
 
 
 
@@ -985,16 +1019,17 @@ CONFIG_PACKAGE_uclient-fetch=y
 
 
 
-CONFIG_PACKAGE_zsh=y
-
-
-CONFIG_PACKAGE_ttyd=y
 
 
 
 
 
 
+
+
+CONFIG_PACKAGE_coreutils=y
+CONFIG_PACKAGE_coreutils-base64=y
+CONFIG_PACKAGE_coreutils-nohup=y
 CONFIG_PACKAGE_iwinfo=y
 CONFIG_PACKAGE_jshn=y
 CONFIG_PACKAGE_libjson-script=y
