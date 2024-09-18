@@ -1,2 +1,1 @@
-#adslr afoundry alfa-network ampedwireless arcadyan asiarf asus beeline belkin buffalo bolt comfast cudy dlink dual-q d-team edimax elecom etisalat firefly gehua glinet gnubee hanyang h3c haier hilink hiwifi humax huasifei iodata iptime jcg jdcloud keenetic lenovo linksys mediatek meig mercusys mikrotik mqmaker mtc mts netgear netis openfi oraybox phicomm planex raisecom renkforce rostelecom samknows sercomm sim snr storylink telco-electronics tenbay thunder totolink tozed tplink ubnt unielec wavlink wevo wifire winstars wodesys xiaomi xiaoyu xzwifi youhua youku yuncore z-router zbtlink zio zte zyxel
-
+#phicomm
