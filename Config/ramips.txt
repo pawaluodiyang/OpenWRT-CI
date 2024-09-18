@@ -1,1 +1,3 @@
 #phicomm
+
+CONFIG_TARGET_DEVICE_ramips_mt7621_DEVICE_phicomm_k2p=y
