@@ -1,6 +1,3 @@
-CONFIG_TARGET_ramips=y
-CONFIG_TARGET_ramips_mt7621=y
-CONFIG_TARGET_ramips_mt7621_DEVICE_phicomm_k2p=y
 CONFIG_TARGET_IMAGES_GZIP=y
 CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
 CONFIG_PACKAGE_ipv6helper=y
